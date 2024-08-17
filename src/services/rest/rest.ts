@@ -1,4 +1,4 @@
-import api from "../api-config/rxjs-config";
+import api from "../ApiConfig/rxjs";
 
 export class Rest {
     getTeams() {

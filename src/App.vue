@@ -1,11 +1,22 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({  
-})
+import { RouterView } from 'vue-router';
+export default {};
 </script>
 
 <template>
-  <div class="h-screen bg-gradient-to-r from-slate-300 via-white to-slate-300">
-    <RouterView/>
-  </div>
+  <main class="w-full min-h-[100vh] px-[20%] overflow-hidden">
+    <RouterView></RouterView>
+    <footer class="w-full flex justify-around" >
+      <a class="mx-3 no-underline text-black font-tomorrow" href="https://www.instagram.com/victtor_u/">
+        @victtor_u
+      </a>
+      <a class="mx-3 no-underline text-black font-tomorrow" href="https://linkedin.com/in/victor-manoel-magalhães-timbo-873a67201">
+        Linkedln
+      </a>
+      <a class="mx-3 no-underline text-black font-tomorrow" href="https://github.com/VictorManoel-Timbo">
+        GitHub
+      </a>
+    </footer>
+  </main>
 </template>
+
