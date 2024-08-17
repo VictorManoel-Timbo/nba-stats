@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'tourney': ['Tourney', 'cursive'],
+        'tomorrow': ['Tomorrow', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
