@@ -6,7 +6,7 @@ export default {};
 <template>
   <main class="w-full min-h-[100vh] px-[20%] overflow-hidden">
     <RouterView></RouterView>
-    <footer class="w-full flex justify-around" >
+    <footer class="w-full flex justify-around my-10">
       <a class="mx-3 no-underline text-black font-tomorrow" href="https://www.instagram.com/victtor_u/">
         @victtor_u
       </a>

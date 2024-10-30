@@ -9,10 +9,10 @@ export default defineComponent({
 })
 </script>
 <template>
-    <main class="text-white font-inter text-lg leading-10">
-        <section v-if="resumeType === 'Jogadores'" class="flex items-center justify-between text-justify">
-            <img src="/src/assets/prancheta.jpg" alt="foto de prancheta" class="w-[45%] border border-white">
-            <div class="w-[50%] h-[100%]">
+    <main class="text-white font-inter text-lg leading-10 h-full">
+        <section v-if="resumeType === 'Jogadores'" class="custom-section">
+            <img src="/src/assets/prancheta.jpg" alt="foto de prancheta" class="w-[45%] h-[440px] border border-white">
+            <div class="custom-content">
                 <h3>Armador - Point Guard (PG):</h3>
                 <p>
                     Líder do time em quadra, controla o ritmo e distribui a bola.
@@ -35,9 +35,9 @@ export default defineComponent({
                 </p>
             </div>
         </section>
-        <section v-else-if="resumeType === 'Jogos'" class="flex flex-wrap items-center justify-between text-justify">
-            <img src="" alt="foto de quadra" class="w-[45%] border border-white">
-            <div class="w-[50%] h-[100%]">
+        <section v-else-if="resumeType === 'Jogos'" class="custom-section">
+            <img src="/src/assets/partida-nba.jpg" alt="foto de jogo da nba" class="w-[45%] h-[440px] border border-white">
+            <div class="custom-content">
                 <h3>Armador - Point Guard (PG):</h3>
                 <p>
                     Líder do time em quadra, controla o ritmo e distribui a bola.
@@ -60,9 +60,9 @@ export default defineComponent({
                 </p>
             </div>
         </section>
-        <section v-else class="flex flex-wrap items-center justify-between text-justify">
-            <img src="" alt="foto dos times" class="w-[45%] border border-white">
-            <div class="w-[50%] h-[100%]">
+        <section v-else class="custom-section">
+            <img src="/src/assets/times-nba.png" alt="foto dos times" class="w-[45%] h-[440px]">
+            <div class="custom-content">
                 <h3>Armador - Point Guard (PG):</h3>
                 <p>
                     Líder do time em quadra, controla o ritmo e distribui a bola.
@@ -89,9 +89,19 @@ export default defineComponent({
 </template>
 
 <style scoped>
+
 h3 {
   font-family: 'Tourney';
   font-size: x-large;
   text-decoration: underline;
 }
+
+.custom-section {
+    @apply flex items-center justify-between text-justify h-full;
+}
+
+.custom-content {
+    @apply w-1/2 h-full flex flex-col justify-around;
+}
+
 </style>

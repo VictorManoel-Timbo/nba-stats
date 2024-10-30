@@ -31,11 +31,11 @@ export default defineComponent({
 
 <template>
   <main class="flex flex-col items-center">
-    <section class="font-tourney flex flex-col justify-center w-96 h-80 text-9xl">
-      <span class="flex justify-end">INFO</span>
-      <span class="flex justify-start">NBA</span>
+    <section class="font-tourney flex flex-col justify-center w-96 h-[90vh] text-9xl">
+      <span class="flex justify-start hover:text-red-600 duration-300">INFO</span>
+      <span class="flex justify-end hover:text-blue-600 duration-300">NBA</span>
     </section>
-    <div class="flex items-center justify-around font-tomorrow font-bold text-xl w-[70%]">
+    <div class="flex items-center justify-around font-tomorrow w-[70%]">
       <RouterLink v-for="item in nav" :key="item.name" :to="item.link" class="btn" @mouseenter="showContent(item.name)"
         @mouseleave="hideContent(item.name)">
         {{ item.name }}
@@ -60,8 +60,8 @@ export default defineComponent({
   justify-content: center;
   border-radius: 20px 20px 0px 0px;
   padding: 12px 24px;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.45rem;
+  font-weight: 500;
   color: black;
   text-decoration: none;
   overflow: hidden;
