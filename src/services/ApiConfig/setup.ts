@@ -1,10 +1,10 @@
 import axios, { type AxiosError, type AxiosInstance, type AxiosRequestConfig } from "axios";
 
-function apiConfig(baseUrl: string): AxiosRequestConfig {
+function apiConfig(): AxiosRequestConfig {
   return {
-    baseURL: baseUrl,
+    baseURL: "https://api.balldontlie.io/v1",
     headers: {
-      Authorization: import.meta.env.VITE_KEY
+      Authorization: "f55137da-ad8f-4a96-8299-059c783ce308"
     }
   };
 }
@@ -29,8 +29,8 @@ function initAxios(config: AxiosRequestConfig): AxiosInstance {
   return defineInstance;
 }
 
-function api(baseURL = "/api") {
-  return initAxios(apiConfig(baseURL));
+function api() {
+  return initAxios(apiConfig());
 }
 
 export default api;
